@@ -1,0 +1,124 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: sealshell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    
+}
+
+/* header section */
+.nav-bar{
+    display: flex;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    justify-content: space-between;
+    align-items: center;
+}
+/* navbar logo */
+.nav-logo img{
+    height: 50px;
+    padding-left: 10px;
+}
+/* navbar items */
+.nav-items{
+    display: flex;
+    list-style: none;
+    gap: 20px; 
+}
+
+.nav-items li a{
+    color: seashell;
+    
+}
+
+/* main section  */
+
+.banner{
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: auto;
+} 
+
+.banner-description {
+    position: absolute;
+    top: 50%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: seashell; 
+    width: 100%;
+    background-color: black
+}
+
+/* section styling */
+
+.section-heading{
+    color: seashell;
+}
+
+figcaption{
+    padding-top: 10px;
+    color: seashell;
+    
+}
+
+.section-images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-images img{   
+    height: 200px;
+    width: 300px;
+    
+}
+
+/* location  */
+
+.location{
+    background-image: url(images/location.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.location-list{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.location h2{
+    color: seashell;
+    background-color: transparent;
+    padding-top: 3%;
+    font-size: 2rem;
+}
+
+.location-card{
+    width: 300px;
+    color: seashell;
+    background-color: black;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+/* Footer */
+footer{
+    color: seashell;
+    height: 200px;
+}
+
+.copyright{
+    text-align: left;
+    padding-left: 20px;
+}

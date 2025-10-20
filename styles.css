@@ -1,11 +1,13 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    color: sealshell;
+    color: seashell;
     background-color: black;
     opacity: 0.9;
     text-align: center;
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* header section */
@@ -15,11 +17,36 @@
     border-bottom: 1px solid seashell;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
 }
+
 /* navbar logo */
 .nav-logo img{
     height: 50px;
     padding-left: 10px;
+    flex-shrink: 0; /* Prevents logo from shrinking */
+}
+
+/* navbar items */
+.nav-items{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: nowrap; 
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.nav-items li a{
+    color: seashell;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+/* navbar logo */
+.nav-logo img{
+    height: 50px;
 }
 /* navbar items */
 .nav-items{
@@ -30,64 +57,117 @@
 
 .nav-items li a{
     color: seashell;
-    
-}
+    text-decoration: none;
+} 
 
-/* main section  */
-
+/* main section - Banner */
 .banner{
-    background-image: url(images/background.jpg);
+    background-image: url("images/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
-    width: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 
 .banner-description {
-    position: absolute;
-    top: 50%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    color: seashell; 
-    width: 100%;
-    background-color: black
+    background-color: black;
+    color: seashell;
+    padding: 20px 40px;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: seashell;
+    background-color: transparent;
+}
+
+.banner-description h4 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: normal;
+    color: seashell;
+    background-color: transparent;
 }
 
 /* section styling */
+section {
+    padding: 60px 20px;
+}
 
 .section-heading{
     color: seashell;
+    margin-bottom: 40px;
 }
 
-figcaption{
-    padding-top: 10px;
+.section-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
     color: seashell;
-    
+    background-color: transparent;
+}
+
+.section-heading p {
+    font-size: 1.25rem;
+    color: seashell;
+    background-color: transparent;
 }
 
 .section-images{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-images figure {
+    margin: 0;
+    background-color: transparent;
 }
 
 .section-images img{   
     height: 200px;
     width: 300px;
-    
+    object-fit: cover;
+    display: block;
+}
+
+figcaption{
+    padding-top: 10px;
+    color: seashell;
+    background-color: transparent;
+    font-size: 1.1rem;
 }
 
 /* location  */
-
 .location{
     background-image: url(images/location.jpg);
-    height: 500px;
+    min-height: 500px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location h2{
+    color: seashell;
+    background-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .location-list{
@@ -95,13 +175,8 @@ figcaption{
     gap: 40px;
     justify-content: center;
     background-color: transparent;
-}
-
-.location h2{
-    color: seashell;
-    background-color: transparent;
-    padding-top: 3%;
-    font-size: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
 }
 
 .location-card{
@@ -109,16 +184,379 @@ figcaption{
     color: seashell;
     background-color: black;
     opacity: 1;
-    padding-top: 10px;
+    padding: 30px 20px;
+}
+
+.location-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: seashell;
+    background-color: transparent;
+}
+
+.location-card h4 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 8px 0;
+    color: seashell;
+    background-color: transparent;
 }
 
 /* Footer */
 footer{
     color: seashell;
-    height: 200px;
+    min-height: 200px;
+    padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: seashell;
+    background-color: transparent;
+}
+
+footer h5 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: seashell;
+    background-color: transparent;
+    font-weight: normal;
 }
 
 .copyright{
-    text-align: left;
-    padding-left: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: seashell;
+    background-color: transparent;
+}
+
+/* Responsive design */
+/* Tablet devices (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Banner */
+    .banner {
+        height: 600px;
+    }
+    
+    .banner-description {
+        padding: 20px 30px;
+        width: 85%;
+    }
+    
+    .banner-description h2 {
+        font-size: 2rem;
+    }
+    
+    .banner-description h4 {
+        font-size: 1.25rem;
+    }
+
+    /* Section styling */
+    section {
+        padding: 50px 15px;
+    }
+    
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    
+    .section-heading p {
+        font-size: 1.1rem;
+    }
+    
+    .section-images {
+        gap: 25px;
+    }
+    
+    .section-images img {
+        height: 180px;
+        width: 270px;
+    }
+    
+    figcaption {
+        font-size: 1rem;
+    }
+
+    /* Location section */
+    .location {
+        min-height: 450px;
+        padding: 50px 15px;
+    }
+    
+    .location h2 {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+    
+    .location-list {
+        gap: 30px;
+    }
+    
+    .location-card {
+        width: 280px;
+        padding: 25px 18px;
+    }
+    
+    .location-card h3 {
+        font-size: 1.35rem;
+    }
+    
+    .location-card h4 {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        min-height: 180px;
+        padding: 35px 15px 18px;
+    }
+    
+    footer h2 {
+        font-size: 1.75rem;
+        margin-bottom: 18px;
+    }
+    
+    footer h5 {
+        font-size: 1rem;
+        margin: 7px 0;
+    }
+    
+    .copyright {
+        margin-top: 25px;
+    }
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-items {
+        gap: 10px; 
+    }
+    
+    .nav-items li a {
+        font-size: 16px; 
+    }
+    
+    .nav-logo img {
+        height: 40px; 
+    }
+
+    /* main section - Banner */
+    .banner {
+        height: 500px;
+    }
+    
+    .banner-description {
+        padding: 15px 25px;
+        width: 90%;
+    }
+    
+    .banner-description h2 {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+    
+    .banner-description h4 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    /* Section styling */
+    section {
+        padding: 40px 15px;
+    }
+    
+    .section-heading {
+        margin-bottom: 30px;
+    }
+    
+    .section-heading h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-heading p {
+        font-size: 1rem;
+    }
+    
+    .section-images {
+        gap: 20px;
+    }
+    
+    .section-images img {
+        height: 160px;
+        width: 240px;
+    }
+    
+    figcaption {
+        font-size: 0.95rem;
+    }
+
+    /* Location section */
+    .location {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+    
+    .location h2 {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+    
+    .location-list {
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .location-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px 20px;
+    }
+    
+    .location-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .location-card h4 {
+        font-size: 0.95rem;
+        margin: 6px 0;
+    }
+
+    /* Footer */
+    footer {
+        min-height: 160px;
+        padding: 30px 15px 15px;
+    }
+    
+    footer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    footer h5 {
+        font-size: 0.95rem;
+        margin: 6px 0;
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header */
+    .nav-items {
+        gap: 5px;
+    }
+    
+    .nav-items li a {
+        font-size: 14px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 400px;
+    }
+    
+    .banner-description {
+        padding: 15px 20px;
+        width: 95%;
+    }
+    
+    .banner-description h2 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .banner-description h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Section styling */
+    section {
+        padding: 30px 10px;
+    }
+    
+    .section-heading h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-heading p {
+        font-size: 0.9rem;
+    }
+    
+    .section-images {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-images img {
+        height: 200px;
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    figcaption {
+        font-size: 0.9rem;
+        padding-top: 8px;
+    }
+
+    /* Location section */
+    .location {
+        padding: 30px 10px;
+    }
+    
+    .location h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .location-list {
+        gap: 20px;
+    }
+    
+    .location-card {
+        width: 95%;
+        padding: 20px 15px;
+    }
+    
+    .location-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .location-card h4 {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+        min-height: 150px;
+        padding: 25px 10px 12px;
+    }
+    
+    footer h2 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    footer h5 {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+    
+    .copyright {
+        margin-top: 18px;
+        font-size: 0.8rem;
+    }
 }

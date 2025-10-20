@@ -9,20 +9,20 @@
 <body>
     <header>
 
-        <nav class="nav-bar">
+        <nav class="nav-bar" aria-label="Main navigation">
             <div class="nav-logo">
-                <a href="#"><img src="images/logo.png" alt="nav bar logo"></a>
+                <a href="#mission" aria-label="Tea Cozy Home"><img src="images/logo.png" alt="The Tea Cozy logo"></a>
             </div>
             <ul class="nav-items">
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Featured Tea</a></li>
-                <li><a href="#">Location</a></li>
+                <li><a href="#mission" aria-label="Go to Mission section">Mission</a></li>
+                <li><a href="#featured" aria-label="Go to Featured Tea section">Featured Tea</a></li>
+                <li><a href="#location" aria-label="Go to Location section">Location</a></li>
             </ul>
         </nav>
         
     </header>
 
-    <main>
+    <main id="mission" aria-labelledby="mission-heading">
         <div class="banner">
             <div class="banner-description">
                 <h2>Our Mission</h2>
@@ -31,35 +31,35 @@
         </div>
     </main>
 
-    <section>
+    <section id="featured" aria-labelledby="featured-heading">
         <div class="section-heading">
             <h2>Tea of the Month</h2>
             <p>What's Steeping at the Tea Cozy</p>
         </div>
 
-        <div class="section-images">
+        <div class="section-images" role="list">
 
-            <figure>
+            <figure role="listitem">
                 <img src="images/berryblitz.jpg" alt="Fall Berry Blitz Tea">
                 <figcaption>Fall Berry Blitz Tea</figcaption>
-            </figure>
+            </figure role="listitem">
 
-            <figure>
+            <figure role="listitem">
                 <img src="images/spiced-rum.jpg" alt="Spiced Rum Tea">
                 <figcaption>Spiced Rum Tea</figcaption>
             </figure>
 
-            <figure>
+            <figure role="listitem">
                 <img src="images/donut.jpg" alt="Seasonal Donuts">
                 <figcaption>Seasonal Donuts</figcaption>
             </figure>
 
-            <figure>
+            <figure role="listitem">
                 <img src="images/myrtle-ave.jpg" alt="Myrtle Ave Tea">
                 <figcaption>Myrtle Ave Tea</figcaption>
             </figure>
 
-            <figure>
+            <figure role="listitem">
                 <img src="images/bedford bizarre.jpg" alt="Bedford Bizarre">
                 <figcaption>Bedford Bizarre</figcaption>
             </figure>
@@ -67,23 +67,23 @@
         </div>
     </section>
 
-    <section class="location">
+    <section id="location" class="location" aria-labelledby="location-heading">
         <h2>Locations</h2>
-        <div class="location-list">
+        <div class="location-list" role="list">
             
-            <div class="location-card">
+            <div class="location-card" role="listitem" aria-label="Downtown location">
                 <h3>Downtown</h3>
                 <h4>384 West 4th St</h4>
                 <h4>Suite 108</h4>
                 <h4>Portland, Maine</h4>
             </div>
-            <div class="location-card">
+            <div class="location-card" role="listitem" aria-label="East Bayside location">
                 <h3>East Bayside</h3>
                 <h4>3433 Phisherman's Avenue</h4>
                 <h4>(Nortwest Corner)</h4>
                 <h4>Portland, Maine</h4>
             </div>
-            <div class="location-card">
+            <div class="location-card" role="listitem" aria-label="Oakdale location">
                 <h3>Oakdale</h3>
                 <h4>515 Crescent Avenue</h4>
                 <h4>Second Floor</h4>
@@ -92,12 +92,12 @@
         </div>
     </section>
 
-    <footer>
-        <h2>The Tea Cozy</h2>
-        <h5>contact@theteacozy.com</h5>
-        <h5>917-555-8904</h5>
+    <footer role="contentinfo" aria-label="Footer">
+        <h2>The Tea Cozy Shop</h2>
+        <h5>mail@gmail.com</h5>
+        <h5>+91 1234567890</h5>
 
-        <h5 class="copyright">copyright The Tea Cozy 2017</h5>
+        <h5 class="copyright">copyright The Tea Cozy 2025</h5>
     </footer>
 </body>
 </html>
